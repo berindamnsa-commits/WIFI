@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DANGERS IN PUBLIC WI-FI</title>
+
+<style>
+/* ===== Base page styling ===== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 40px;
+  min-height: 100vh;
+  display: block;
+  background: radial-gradient(circle at top, #0f2027, #000000);
+  color: #ffffff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Cyber grid overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,255,200,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,200,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridMove 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes gridMove {
+  from { transform: translate(0,0); }
+  to   { transform: translate(-40px,-40px); }
+}
+
+/* Card container for content */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(0, 255, 200, 0.3);
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 255, 200, 0.2);
+  z-index: 1;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  color: #1e3a8a;
+  margin-bottom: 30px;
+  font-size: clamp(28px, 5vw, 60px);
+  text-shadow: #3f16d3;
+}
+
+h2, h3, h4, h5, h6 {
+  color: #7918f8;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs */
+p {
+  text-align: justify;
+  font-size: clamp(14px, 2vw, 18px);
+  margin-bottom: 12px;
+}
+
+/* Lists */
+ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+  font-size: clamp(14px, 2vw, 18px);
+  color: rgb(30,129,243);
+}
+
+/* List images */
+.list-item {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.list-item img {
+  width: 220px;
+  max-width: 100%;
+  margin-top: 10px;
+  background-color: #000;
+}
+
+/* Cyber-style button */
+.btn {
+  display: block;
+  margin: 40px auto;
+  padding: 14px 35px;
+  font-size: 16px;
+  color: #000;
+  background: #00ffc8;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(0, 255, 200, 0.6);
+}
+
+.btn:hover {
+  background: #00c9a0;
+  box-shadow: 0 0 25px rgba(0, 255, 200, 0.9);
+  transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>DANGERS IN USING PUBLIC WI-FI</h1>
+
+<h2>What is Public Wi-Fi?</h2>
+<p>
+Public Wi-Fi networks are shared internet connections available in public places such as airports,
+coffee shops, hotels, libraries, and malls. Anyone nearby can connect, usually without a private password.
+</p>
+
+<h3 style="font-size: 25px;">Why People Use Public Wi-Fi</h3>
+
+<h4 style="font-size: 20px; color: #12db44ab;">Convenience</h4>
+<ul>
+  <li class="list-item" >
+    <strong style="color: aqua;">> Instant access:</strong> You don’t need to set up anything—just connect and go. 
+    Perfect for travelers who don’t want to fiddle with SIM cards or roaming plans.</li>
+  <li class="list-item" style="font-size: 18px;">
+    <strong style="color: aqua;">> Remote work:</strong>Digital nomads, students, and professionals can quickly check
+     emails, join meetings, or upload files from almost anywhere.
+    <br>
+    <img src="CA4/meeting.jpg" alt="Online meeting">
+  </li>
+
+  <li class="list-item">
+    <strong style="color: aqua;">> No tethering required:</strong>Instead of draining your phone battery by using 
+    it as a hotspot, you can rely on public 
+  </li>
+</ul>
+
+<h5 style="font-size: 20px; color: #12db44ab;">Cost</h5>
+<ul>
+  <li class="list-item">
+    <strong style="color: aqua;">> Free service:</strong> Most public Wi-Fi hotspots are offered at no charge,
+     making them attractive for people who want to avoid expensive mobile data plans
+  </li>
+
+  <li class="list-item">
+    <strong style="color: aqua;"> >Data savings:</strong>  Streaming videos, downloading large files,
+     or updating apps can eat up mobile data quickly. Public Wi-Fi lets you do these tasks without worrying about overage fees.
+    <br>
+    <img src="CA4/maps.jpg" alt="Maps and data usage">
+  </li>
+
+  <li class="list-item">
+    <strong style="color: aqua;">> Budget-friendly travel:</strong> Avoid roaming charges. Tourists often rely
+     on public Wi-Fi to navigate maps, translate languages, or book tickets without incurring roaming charges.
+      <br>
+    <img src="CA4/translate.jpg" alt="Maps and data usage">
+  </li>
+</ul>
+
+<h6 style="font-size: 20px; color: #12db44ab;">Ubiquity</h6>
+<ul>
+  <li class="list-item">
+    <strong style="color: aqua;">> Widespread availability:</strong> Found almost everywhere.From airports and hotels to coffee shops and even buses
+  </li>
+
+  <li class="list-item">
+    <strong style="color: aqua;">> Always connected:</strong> Businesses offer Wi-Fi as standard as part of their customer service
+    <br>
+    <img src="CA4/freewifi.jpg" alt="Free Wi-Fi sign">
+  </li>
+
+  <li class="list-item">
+    <strong style="color: aqua;">> Modern lifestyle support:</strong> Keeps people connected on the go (social media, work platforms, and entertainment).
+    <br>
+    <img src="CA4/modernday.jpg" alt="Modern lifestyle">
+  </li>
+</ul>
+
+<button class="btn" onclick="discover()">DISCOVER WHAT MAKES IT DANGEROUS</button>
+
+</div>
+</body>
+</html>
