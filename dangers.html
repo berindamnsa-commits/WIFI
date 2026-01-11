@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DANGERS IN PUBLIC WI-FI</title>
+
+<style>
+/* ===== Base page styling ===== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 40px;
+  min-height: 100vh;
+  display: block;
+  /* Updated gradient: blue fading to orange */
+  background: radial-gradient(circle at top, #0077ff, #ff7f50);
+  color: #ffffff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Cyber grid overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridMove 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes gridMove {
+  from { transform: translate(0,0); }
+  to   { transform: translate(-40px,-40px); }
+}
+
+/* Card container for content */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.85); /* darker for contrast */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* lighter border for visibility */
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  z-index: 1;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  color: #ffffff; /* brighter heading */
+  margin-bottom: 30px;
+  font-size: clamp(28px, 5vw, 60px);
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+h2, h3, h4, h5, h6 {
+  color: #ffff99; /* brighter subheadings */
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs */
+p {
+  text-align: justify;
+  font-size: clamp(14px, 2vw, 18px);
+  margin-bottom: 12px;
+  color: #f0f0f0; /* lighter text */
+}
+
+/* Lists */
+ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+  font-size: clamp(14px, 2vw, 18px);
+  color: #e0f7ff; /* more visible list text */
+}
+
+/* List items */
+.list-item {
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* Cyber-style button */
+.btn {
+  display: block;
+  margin: 40px auto;
+  padding: 14px 35px;
+  font-size: 16px;
+  color: #000;
+  background: #00ffc8;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(0, 255, 200, 0.6);
+}
+
+.btn:hover {
+  background: #00c9a0;
+  box-shadow: 0 0 25px rgba(0, 255, 200, 0.9);
+  transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>WHAT MAKES PUBLIC WI-FI NETWORKS SO RISKY DESPITE ITS BENEFITS</h1>
+
+<h4 style="font-size: 20px; color: #12db44ab;">Data Interception</h4>
+<ul>
+  <li class="list-item">
+    <strong style="color: aqua;">> How it happens:</strong> 
+    When you connect to public Wi-Fi, your data travels through the airwaves. 
+    If the network isn’t encrypted, hackers can use tools called “packet sniffers” 
+    to capture the information being transmitted.
+  </li>
+  <li class="list-item" style="font-size: 18px;">
+    <strong style="color: aqua;">> What they can see: </strong>
+    Login credentials, emails, credit card numbers, or even the websites you visit.
+  </li>
+  <li class="list-item">
+    <strong style="color: aqua;">> Real-world example:</strong> 
+    Imagine logging into your bank account at a café. A hacker nearby 
+    could intercept your username and password if the connection isn’t secure.
+  </li>
+</ul>
+
+<h5 style="font-size: 20px; color: #12db44ab;">Fake Hotspots (Rogue Access Points)</h5>
+<ul>
+  <li class="list-item">
+    <strong style="color: aqua;">> How it happens:</strong>
+     Cybercriminals set up a Wi-Fi network with a name that looks legitimate,
+      like “Free_Airport_Wi-Fi” or “Starbucks_Wi-Fi.”
+  </li>
+  <li class="list-item">
+    <strong style="color: aqua;">> Why it’s dangerous:</strong> 
+    Once you connect, all your traffic flows through their system.
+     They can monitor everything you do, inject malware, or redirect you to fake websites.
+  </li>
+  <li class="list-item">
+    <strong style="color: aqua;">> Analogy:</strong> 
+    It’s like getting into a taxi that looks official but is 
+    actually run by a scammer who takes you to the wrong place.
+  </li>
+</ul>
+
+<h6 style="font-size: 20px; color: #12db44ab;">Man-in-the-Middle (MITM) Attacks</h6>
+<ul>
+  <li class="list-item">
+    <strong style="color: aqua;">> How it happens:</strong>
+    A hacker positions themselves between you and the website or 
+    service you’re trying to access. They intercept and possibly alter the communication without you knowing.
+  </li>
+  <li class="list-item">
+    <strong style="color: aqua;">> Impact:</strong> 
+    Sensitive information like login credentials, messages, 
+    or financial transactions can be stolen or manipulated.
+  </li>
+  <li class="list-item">
+    <strong style="color: aqua;">> Analogy:</strong>
+     It’s like whispering a secret to a friend, but someone else 
+     is sitting between you two, listening and changing the message before it reaches your friend.
+  </li>
+</ul>
+
+<h6 style="font-size: 20px; color: #12db44ab;">Malware Distribution</h6>
+<ul>
+  <li class="list-item">
+    <strong style="color: aqua;">> How it happens:</strong> 
+    Hackers can exploit unsecured public Wi-Fi to push malicious 
+    software onto connected devices.
+  </li>
+  <li class="list-item">
+    <strong style="color: aqua;">> Impact:</strong> 
+    Once infected, your device could be used to steal data, spy on your activity,
+     or even become part of a botnet.
+  </li>
+</ul>
+
+<h6 style="font-size: 20px; color: #12db44ab;">Unencrypted Connections</h6>
+<ul>
+  <li class="list-item">
+    <strong style="color: aqua;">> What encryption does:</strong>
+     Encryption scrambles your data so only the intended recipient can read it.
+  </li>
+  <li class="list-item">
+    <strong style="color: aqua;">> The risk:</strong> 
+    Many public Wi-Fi networks don’t use encryption (or use outdated methods like WEP).
+     This means anyone else on the same network can potentially see your activity.
+  </li>
+  <li class="list-item">
+    <strong style="color: aqua;">> Impact:</strong> 
+    Even something as simple as browsing social media could expose your login session to attackers.
+  </li>
+</ul>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DANGERS IN PUBLIC WI-FI</title>
+
+<style>
+/* ===== Base page styling ===== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 40px;
+  min-height: 100vh;
+  display: block;
+  background: radial-gradient(circle at top, #0077ff, #ff7f50); /* blue to orange */
+  color: #ffffff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Cyber grid overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridMove 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes gridMove {
+  from { transform: translate(0,0); }
+  to   { transform: translate(-40px,-40px); }
+}
+
+/* Card container for content */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.85); /* darker for contrast */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* lighter border */
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  z-index: 1;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-size: clamp(28px, 5vw, 60px);
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+h2, h3, h4, h5, h6 {
+  color: #fffacd; /* light yellow for visibility */
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs */
+p {
+  text-align: justify;
+  font-size: clamp(14px, 2vw, 18px);
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+/* Lists */
+ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+  font-size: clamp(14px, 2vw, 18px);
+  color: rgb(30,129,243);
+}
+
+/* List items */
+.list-item {
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* Placeholder images */
+.list-item img {
+  width: 100%;
+  max-width: 600px; /* increased size */
+  height: auto;
+  margin-top: 15px;
+  background-color: #000;
+  border-radius: 8px;
+}
+
+/* Cyber-style button */
+.btn {
+  display: block;
+  margin: 40px auto;
+  padding: 14px 35px;
+  font-size: 16px;
+  color: #000;
+  background: #00ffc8;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(0, 255, 200, 0.6);
+}
+
+.btn:hover {
+  background: #00c9a0;
+  box-shadow: 0 0 25px rgba(0, 255, 200, 0.9);
+  transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>DANGERS IN USING PUBLIC WI-FI</h1>
+
+<h2>What is Public Wi-Fi?</h2>
+<p>
+Public Wi-Fi networks are shared internet connections available in public places such as airports,
+coffee shops, hotels, libraries, and malls. Anyone nearby can connect, usually without a private password.
+</p>
+
+<h3 style="font-size: 25px;">Why People Use Public Wi-Fi</h3>
+
+<h4 style="font-size: 20px; color: #12db44ab;">Convenience</h4>
+<ul>
+  <li class="list-item" >
+    <strong style="color: aqua;">> Instant access:</strong> You don’t need to set up anything—just connect and go. 
+    Perfect for travelers who don’t want to fiddle with SIM cards or roaming plans.
+  </li>
+  <li class="list-item" style="font-size: 18px;">
+    <strong style="color: aqua;">> Remote work:</strong>Digital nomads, students, and professionals can quickly check
+     emails, join meetings, or upload files from almost anywhere.
+    <br>
+    <img src="https://via.placeholder.com/600x350?text=Online+meeting" alt="Online meeting">
+  </li>
+
+  <li class="list-item">
+    <strong style="color: aqua;">> No tethering required:</strong>Instead of draining your phone battery by using 
+    it as a hotspot, you can rely on public Wi-Fi.
+  </li>
+</ul>
+
+<h5 style="font-size: 20px; color: #12db44ab;">Cost</h5>
+<ul>
+  <li class="list-item">
+    <strong style="color: aqua;">> Free service:</strong> Most public Wi-Fi hotspots are offered at no charge,
+     making them attractive for people who want to avoid expensive mobile data plans
+  </li>
+
+  <li class="list-item">
+    <strong style="color: aqua;"> >Data savings:</strong> Streaming videos, downloading large files,
+     or updating apps can eat up mobile data quickly. Public Wi-Fi lets you do these tasks without worrying about overage fees.
+    <br>
+    <img src="https://via.placeholder.com/600x350?text=Maps+and+data+usage" alt="Maps and data usage">
+  </li>
+
+  <li class="list-item">
+    <strong style="color: aqua;">> Budget-friendly travel:</strong> Avoid roaming charges. Tourists often rely
+     on public Wi-Fi to navigate maps, translate languages, or book tickets without incurring roaming charges.
+      <br>
+    <img src="https://via.placeholder.com/600x350?text=Translate+Apps" alt="Translate Apps">
+  </li>
+</ul>
+
+<h6 style="font-size: 20px; color: #12db44ab;">Ubiquity</h6>
+<ul>
+  <li class="list-item">
+    <strong style="color: aqua;">> Widespread availability:</strong> Found almost everywhere. From airports and hotels to coffee shops and even buses
+  </li>
+
+  <li class="list-item">
+    <strong style="color: aqua;">> Always connected:</strong> Businesses offer Wi-Fi as standard as part of their customer service
+    <br>
+    <img src="https://via.placeholder.com/600x350?text=Free+Wi-Fi+Sign" alt="Free Wi-Fi sign">
+  </li>
+
+  <li class="list-item">
+    <strong style="color: aqua;">> Modern lifestyle support:</strong> Keeps people connected on the go (social media, work platforms, and entertainment).
+    <br>
+    <img src="https://via.placeholder.com/600x350?text=Modern+Lifestyle" alt="Modern lifestyle">
+  </li>
+</ul>
+
+<!-- Updated button -->
+<button class="btn" onclick="window.location.href='lockout.html'">Red Flags on Public Wi-Fi Networks</button>
+
+</div>
+</body>
+</html>
+
+
+</div>
+</body>
+</html>

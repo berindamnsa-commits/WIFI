@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DANGERS IN PUBLIC WI-FI</title>
+
+<style>
+/* ===== Base page styling ===== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 40px;
+  min-height: 100vh;
+  display: block;
+  /* Updated gradient: blue fading to orange */
+  background: radial-gradient(circle at top, #0077ff, #ff7f50);
+  color: #ffffff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Cyber grid overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,255,200,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,200,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridMove 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes gridMove {
+  from { transform: translate(0,0); }
+  to   { transform: translate(-40px,-40px); }
+}
+
+/* Card container for content */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.85); /* slightly darker for contrast */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* lighter border for visibility */
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  z-index: 1;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  color: #ffffff; /* make heading text brighter */
+  margin-bottom: 30px;
+  font-size: clamp(28px, 5vw, 60px);
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+h2, h3, h4, h5, h6 {
+  color: #ffff99; /* brighter yellow for subheadings */
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs */
+p {
+  text-align: justify;
+  font-size: clamp(14px, 2vw, 18px);
+  margin-bottom: 12px;
+  color: #f0f0f0; /* make text lighter */
+}
+
+/* Lists */
+ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+  font-size: clamp(14px, 2vw, 18px);
+  color: #e0f7ff; /* more visible text */
+}
+
+/* List items */
+.list-item {
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* Cyber-style button */
+.btn {
+  display: block;
+  margin: 40px auto;
+  padding: 14px 35px;
+  font-size: 16px;
+  color: #000;
+  background: #00ffc8;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(0, 255, 200, 0.6);
+}
+
+.btn:hover {
+  background: #00c9a0;
+  box-shadow: 0 0 25px rgba(0, 255, 200, 0.9);
+  transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Red Flags on Public Wi-Fi Networks</h1>
+
+<h4 style="font-size: 20px; color: #12db44ab;">No password required:</h4>
+<ul>
+  <li class="list-item">
+      If the Wi-Fi is completely open (no password), it’s usually unencrypted,
+       meaning your data can be intercepted.
+  </li>
+</ul>
+
+<h5 style="font-size: 20px; color: #12db44ab;">Suspicious network names:</h5>
+<ul>
+  <li class="list-item">
+    If you see multiple networks with similar names 
+    (e.g., “Airport_Wi-Fi” and “Free_Airport_Wi-Fi”), one could be a fake hotspot.
+  </li>
+</ul>
+
+<h6 style="font-size: 20px; color: #12db44ab;">No HTTPS padlock: </h6>
+<ul>
+  <li class="list-item">
+  When browsing, if websites don’t show the padlock in the address bar, your connection isn’t secure.
+  </li>
+</ul>
+
+<h6 style="font-size: 20px; color: #12db44ab;">Pop-ups or redirects: </h6>
+<ul>
+  <li class="list-item">
+If connecting to Wi-Fi forces you through strange login pages or
+ redirects you to odd websites, that’s a red flag.
+  </li>
+</ul>
+
+<h6 style="font-size: 20px; color: #12db44ab;">Excessive permissions:</h6>
+<ul>
+  <li class="list-item">
+   Some public Wi-Fi portals ask for personal info (like email or phone number) 
+   before granting access—this can be a phishing tactic.
+  </li>
+</ul>
+
+<button class="btn" onclick="discover()">how you can stay safe
+</button>
+
+</div>
+</body>
+</html>
